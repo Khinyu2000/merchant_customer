@@ -1,0 +1,874 @@
+/* Mobile View */
+/* For Acc Settings */
+.sn-container{
+  width: 88%;
+  padding: 2% 6%;
+}
+.sn-user-name{
+  text-align: center;
+  margin: 1em 0 1.2em 0;
+}
+.sn-user-name i{
+  font-size: 3em;
+  color: rgba(0, 0, 0, 0.35);
+  margin-bottom: 0.2em;
+}
+.sn-user-name div{
+  font-size: 1.5em;
+  color: #777;
+}
+.sn_settings_container{
+  width: 100%;
+  height: 25%;
+  box-shadow: 0 0 5px #ccc;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.sn_change_tab::before{
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 3em;
+  left: 50%;
+  border-radius: 2px 0 0 0;
+  background-color: #fff;
+}
+#sn_change_information:hover, #sn_change_password:hover{
+  cursor: pointer;
+}
+#sn_change_information{
+  border-top-left-radius: 4px;
+}
+#sn_change_password{
+  border-top-right-radius: 4px;
+}
+#sn_change_information, #sn_change_password{
+  background: #2ec5ff;
+  color: #fff;
+  display: block;
+  float: left;
+  width: 50%;
+  text-align: center;
+  padding: 1em 0;
+}
+.sn_change_password_form{
+  display: none;
+}
+.sn_change_password_form h2{
+  display: none;
+}
+.sn_change_info_form h2{
+  display: none;
+}
+.sn_change_info_form, .sn_change_password_form{
+  padding-top: 3em;
+  padding-bottom: 1.5em;
+}
+.sn_change_info_form img, .sn_change_password_form img{
+  width: 5em;
+  display: block;
+  margin: 1em auto;
+}
+.sn_change_info_form::before{
+  content: '';
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  left: 27%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-radius: 2px 0 0 0;
+  background-color: #fff;
+}
+.sn_change_password_form::before{
+  content: '';
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  right: 25%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-radius: 2px 0 0 0;
+  background-color: #fff;
+}
+.input{
+  position: relative;
+  display: block;
+  width: 85%;
+  height: 100%;
+  max-width: 16em;
+  font-size: 1.1em;
+  border-radius: 8px;
+  margin-bottom: 22px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #ddd;
+  background: none;
+  box-sizing: border-box;
+}
+
+.input.focus{
+  border: 2px solid #2EC5FF;
+}
+
+.input input{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+  background: none;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  padding: 10px 8px 10px 50px;
+  border-radius: 8px;
+  transition: 0.2s ease;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -ms-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  color: #777;
+}
+
+.input input:focus{
+  padding: 10px 8px 10px 16px;
+  outline: none;
+}
+
+.input span:first-child i{
+  color: #ddd;
+}
+
+.input span:first-child{
+  display: inline-flex;
+  font-size: 1.2em;
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  transform: translate(-10px, -50%);
+}
+.change{
+  display: block;
+  width: 85%;
+  max-width: 17.5em;
+  margin: 0 auto;
+}
+.change input[type=submit]{
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  font-size: 1.1em;
+  background: #2EC5FF;
+  color: #ffffff;
+  padding:11px 8px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+/* end Acc Settings */
+
+/* Chat Box */
+
+.sn_chatbox_container{
+  width: 100%;
+}
+/* .sn_conversation_header{
+  color: #2D3436;
+  font-size: 1.2em;
+  margin: 0.5em 0 0.5em 0.6em;
+} */
+.user_dialog h4{
+  color: #fff;
+  background: #2ec5ff;
+  font-size: 1.2em;
+  padding: 1em 0 1em 0.7em;
+}
+#chatting-name{
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+#admin_active{
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #39ff14;
+  margin-left: 10px;
+  animation: 1.5s ease infinite pulse;
+  box-shadow: 0 0 0;
+  vertical-align: middle;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #39ff14ba;
+  }
+  100% {
+    box-shadow: 0 0 0 6px #39ff1461;
+  }
+}
+#admin_typing{
+  display: block;
+  color: #fff;
+  font-size: 0.68em;
+  line-height: 1.5em;
+  font-weight: 800;
+}
+.chat_history{
+  box-sizing: border-box;
+  height: calc(100vh - 182px);
+  background-color: #fff;
+  overflow-y: auto;
+  padding: 8px 5px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #c3c3c3;
+  margin: 0em 0.5em 0.8em 0.5em;
+}
+.to_user_chat_style p, .from_user_chat_style p{
+  display: inline-block;
+  max-width: 64%;
+  text-align: justify;
+  background-color: #2EC5FF;
+  color: white;
+  font-size: 15px;
+  padding: 10px 12px;
+  border-radius: 16px 16px 0 16px;
+}
+.to_user_chat_style p{
+  background-color: #f1f1f1;
+  color: #333;
+  border-radius: 16px 16px 16px 0;
+}
+.to_user{
+  color: #1034A6;
+}
+.from_user{
+  color: #333;
+}
+.to_user_time_style, .from_user_time_style{
+  width: 100%;
+  font-size: 0.7em;
+  color: #777;
+  margin-top: 4px;
+}
+.wp-conversation-message-container{
+  position: relative;
+  box-sizing: border-box;
+  margin-left: 0.7em;
+}
+.emojionearea{
+  border: none !important;
+  border-radius: 6px;
+  width: 84%;
+}
+.emojionearea .emojionearea-editor {
+  min-height: 2.5em !important;
+  max-height: 2.5em !important;
+  line-height: 18px !important;
+  word-break: break-all;
+  padding: 6px 4em 6px 12px !important;
+  background: #efefef;
+  border-radius: 6px;
+}
+.emojionearea-button>div.emojionearea-button-open {
+  background-position: 0 -22px !important;
+  color: #444;
+}
+#wp-send-photo{
+  position: absolute;
+  top: 22%;
+  right: 25%;
+  cursor: pointer;
+  z-index: 1;
+}
+.send_chat{
+  border: none;
+  padding: 0.4em 0.5em;
+  border-radius: 50%;
+  background: #2ec5ff;
+  position: absolute;
+  top: -7%;
+  right: 0.5em;
+}
+.send_chat i{
+  font-size: 1.2em;
+  color: #fff;
+  margin-top: 3px;
+  margin-right: 3px;
+}
+#uploadForm{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 5em;
+  background-color: white;
+  z-index: 5;
+}
+#uploadForm img {
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+}
+#send_photo_button_container {
+  font-family: sans-serif;
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 175px;
+  display: flex;
+  justify-content: space-between;
+}
+#btn_send, #cancel_send {
+  border: none;
+  padding: 6px 10px;
+  background-color: #2ec5ff;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  border-radius: 3px;
+  opacity: 0.8;
+  transition: 0.1s ease;
+  -webkit-transition: 0.1s ease;
+  -moz-transition: 0.1s ease;
+  -ms-transition: 0.1s ease;
+  -o-transition: 0.1s ease;
+}
+#cancel_send {
+  background-color: #E74C3C;
+}
+/* End Chat Box */
+/* Membership */
+.sn-membership-container{
+
+  padding: 1%;
+}
+.sn-membership{
+  border-radius: 4px;
+  box-shadow: 0px 0px 7px -1px #9a9a9a;
+  margin: 2em 1em 2.5em 1em;
+  padding: 1em 2em;
+  position: relative;
+  background: #fff;
+}
+.sn-icon-container{
+  text-align: center;
+  margin-bottom: 1em;
+}
+.sn-icon-container i{
+  font-size: 2.5em;
+  margin-bottom: 7px;
+}
+.sn-icon-container span{
+  font-size: 1.1em;
+  color: #616161;
+  font-weight: 600;
+}
+.sn-silver-icon i{
+  color: #C0BFDF;
+}
+.sn-gold-icon i{
+  color: #FDD600;
+}
+.sn-platinum-icon i{
+  color: #B9BBBC;
+}
+.sn-diamond-icon i{
+  color: #2EC5FF;
+}
+.sn-percentage-container{
+  background: #2EC5FF;
+  color: #fff;
+  position: absolute;
+  top: -5px;
+  right: 1em;
+  padding: 0.4em;
+  text-align: center;
+  height: 2.8em;
+  clip-path: polygon(0% 0%, 0% 100%, 50% 75%, 100% 100%, 100% 0%);
+}
+.sn-definition-container{
+  text-align: center;
+  font-size: 0.9em;
+  line-height: normal;
+  color: #777;
+}
+.sn-percentage{
+ font-weight: bold;
+ margin-top: 10px;
+}
+/* End of Membership */
+.ssn_loader{
+  width: 100%;
+  height: calc(100% - 48px);
+  position: fixed;
+  left: 0;
+  top: 48px;
+  background: #ffffffd6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+/* End Mobile View */
+
+
+/* Desktop View */
+@media (min-width: 60em){
+  body{
+    background: #efefef;
+  }
+  .sn-container{
+    width: 100%;
+    height: calc(100vh - 130px);
+    padding: 0.7% 0% 2% 0%;
+    margin: 0 auto;
+    background: #efefef;
+  }
+  .sn-user-name{
+    text-align: left;
+    margin: 0 0 0.5em 0;
+  }
+  .sn-user-name i{
+    font-size: 1.6em;
+    color: rgba(0, 0, 0, 0.35);
+    float: left;
+  }
+  .sn-user-name div{
+    font-size: 1.1em;
+    padding: 0.2em 1.8em;
+    color: #777;
+  }
+  .sn_settings_container{
+    box-shadow: none;
+  }
+  .sn_change_tab::before{
+    display: none;
+  }
+  #sn_change_information, #sn_change_password{
+    display: none;
+  }
+  .sn_change_info_form, .sn_change_password_form{
+    display: inline-block;
+    width: 49.6%;
+    height: calc(100vh - 174px);
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #ccc;
+    padding-top: 0em;
+  }
+  .sn_change_info_form::before, .sn_change_password_form::before{
+    display: none;
+  }
+  .sn_change_password_form h2, .sn_change_info_form h2{
+    display: block;
+    text-align: center;
+    margin-bottom: 3%;
+  }
+  .sn_change_info_form img, .sn_change_password_form img{
+    width: 4em;
+    margin: 5em auto 0.7em auto;
+  }
+  .input{
+    margin-bottom: 5%;
+    max-width: 12em;
+  }
+  .change{
+    max-width: 13em;
+  }
+  .input input{
+    font-size: 0.75em;
+    padding: 8px 8px 8px 50px;
+  }
+  .input input:focus{
+    padding: 8px 8px 8px 16px;
+    outline: none;
+  }
+  .change input[type=submit]{
+    font-size: 0.75em;
+    padding: 9px 9px;
+  }
+/* Acc Settings */
+/* Chat Box */
+  .sn_chatbox_container{
+    background: #fff;
+  }
+  .user_dialog h4{
+    background: #fff;
+    color: #8a8a8a;
+    border-bottom: 1px solid #c3c3c3;
+  }
+  #chatting-name{
+    color: #8a8a8a;
+  }
+  #admin_typing{
+    display: inline-block;
+    float: right;
+    margin-right: 20px;
+    color: #999;
+    font-weight: 800;
+  }
+  .chat_history{
+    height: calc(100vh - 271px);
+    margin: 0 0 1em 0;
+  }
+  .send_chat{
+    right: 2%;
+    top: 0%;
+  }
+  .emojionearea{
+    width: 92%;
+    margin-left: 0.6em;
+  }
+  .emojionearea .emojionearea-editor {
+    background: #dadada;
+    min-height: 6em !important;
+  }
+  .wp-conversation-message-container{
+    margin-left: 0em;
+    padding-bottom: 0.9em;
+  }
+  #wp-send-photo{
+    right: 10%;
+    top: 9%;
+  }
+  #uploadForm{
+    height: 7em;
+  }
+
+  .ssn_loader{
+    width: 70%;
+    height: calc(100% - 64px);
+    position: fixed;
+    left: 15%;
+    top: 64px;
+    background: #ffffffd6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+  }
+/* End Chat Box */
+/* Membership */
+  .sn-membership-container{
+    display: flex;
+    padding: 1% 0;
+  }
+  .sn-membership{
+    padding: 1em 0.5em;
+    margin: 0em 0.5em 0em 0em;
+    height: calc(100vh - 160px);
+    width: 25%;
+  }
+  .sn-definition-container{
+    height: calc(100vh - 350px);
+    overflow-y: auto;
+  }
+  .sn-membership:last-child{
+    margin-right: 0;
+  }
+  .sn-icon-container i{
+    margin-top: 1.5em;
+  }
+/* End of Membership */
+}
+/* End Desktop View */
+
+/* Tablet View */
+@media (min-width: 30em) and (max-width: 60em){
+/* Acc Settings */
+  body{
+    background: #efefef;
+  }
+  .sn-container{
+    float: left;
+    width: calc(100vw - 167px);
+    height: calc(100vh - 63px);
+    background: #efefef;
+    box-sizing: border-box;
+    padding: 1%;
+  }
+  .sn-user-name{
+    text-align: left;
+    margin: 0 0 0.5em 0;
+  }
+  .sn-user-name i{
+    font-size: 1.6em;
+    color: rgba(0, 0, 0, 0.35);
+    float: left;
+  }
+  .sn-user-name div{
+    font-size: 1.1em;
+    padding: 0.2em 1.8em;
+    color: #777;
+  }
+  .sn_settings_container{
+    box-shadow: none;
+  }
+  .sn_change_tab::before{
+    display: none;
+  }
+  #sn_change_information, #sn_change_password{
+    display: none;
+  }
+  .sn_change_info_form, .sn_change_password_form{
+    display: inline-block;
+    width: 49.5%;
+    height: calc(100vh - 120px);
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #ccc;
+    padding-top: 0em;
+  }
+  .sn_change_info_form::before, .sn_change_password_form::before{
+    display: none;
+  }
+  .sn_change_password_form h2, .sn_change_info_form h2{
+    display: block;
+    text-align: center;
+    margin-bottom: 3%;
+  }
+  .sn_change_info_form img, .sn_change_password_form img{
+    width: 2.5em;
+    margin: 0.7em auto;
+  }
+  .input{
+    margin-bottom: 3%;
+  }
+  .input input{
+    font-size: 0.75em;
+    padding: 8px 8px 8px 50px;
+  }
+  .input input:focus{
+    padding: 8px 8px 8px 16px;
+    outline: none;
+  }
+  .change input[type=submit]{
+    font-size: 0.75em;
+    padding: 9px 9px;
+  }
+/* End Acc Settings */
+/* Chat Box */
+  .sn_chatbox_container{
+    float: left;
+    width: calc(100vw - 167px);
+    height: calc(100vh - 63px);
+    background: #efefef;
+    box-sizing: border-box;
+    padding: 1%;
+  }
+  .wp-conversation-message-container{
+    margin-left: 0em;
+  }
+  #admin_typing{
+    display: inline-block;
+    float: right;
+    margin-right: 20px;
+  }
+  .chat_history{
+    height: calc(100vh - 185px);
+    margin: 0 0 0.7em 0;
+  }
+  .emojionearea{
+    width: 90%;
+  }
+  .emojionearea .emojionearea-editor{
+    border: 1px solid #c3c3c3;
+    background: #fff;
+  }
+  .send_chat{
+    right: 0em;
+  }
+  #wp-send-photo{
+    right: 16%;
+  }
+  #uploadForm{
+    width: 100%;
+    height: 6em;
+    bottom: -9px;
+  }
+/* End Chat Box */
+/* Membership */
+.sn-membership-container{
+  float: left;
+  width: calc(100vw - 167px);
+  height: calc(100vh - 63px);
+  background: #efefef;
+  box-sizing: border-box;
+  padding: 1%;
+  overflow-y: scroll;
+}
+.sn-membership{
+  margin: 1em;
+}
+/* End of Membership */
+}
+/* End Tablet View */
+
+@media (min-width: 30em) and (max-width: 60em) and (min-height: 45em){
+  body{
+    background: #efefef;
+  }
+  .sn-container{
+    width: calc(100vw - 167px);
+    height: calc(100vh - 106px);
+    padding: 0.7% 1% 2% 1%;
+    margin: 0 auto;
+    background: #efefef;
+  }
+  .sn-user-name{
+    text-align: left;
+    margin: 0 0 0.5em 0;
+  }
+  .sn-user-name i{
+    font-size: 1.6em;
+    color: rgba(0, 0, 0, 0.35);
+    float: left;
+  }
+  .sn-user-name div{
+    font-size: 1.1em;
+    padding: 0.2em 1.8em;
+    color: #777;
+  }
+  .sn_settings_container{
+    box-shadow: none;
+  }
+  .sn_change_tab::before{
+    display: none;
+  }
+  #sn_change_information, #sn_change_password{
+    display: none;
+  }
+  .sn_change_info_form, .sn_change_password_form{
+    display: inline-block;
+    width: 100%;
+    height: calc(100vh - 579px);
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #ccc;
+    padding-top: 0em;
+    padding-bottom: 1em;
+    margin-bottom: 1%;
+  }
+  .sn_change_info_form::before, .sn_change_password_form::before{
+    display: none;
+  }
+  .sn_change_password_form h2, .sn_change_info_form h2{
+    display: block;
+    text-align: center;
+    margin-bottom: 3%;
+  }
+  .sn_change_info_form img, .sn_change_password_form img{
+    width: 4em;
+    margin: 3em auto 0.7em auto;
+  }
+  .input{
+    margin-bottom: 5%;
+    max-width: 12em;
+  }
+  .change{
+    max-width: 13em;
+    margin-bottom: 3em;
+  }
+  .input input{
+    font-size: 0.75em;
+    padding: 8px 8px 8px 50px;
+  }
+  .change input[type=submit]{
+    font-size: 0.75em;
+    padding: 9px 9px;
+  }
+  /* #wp-send-photo{
+    right: 6em;
+  } */
+
+  .ssn_loader{
+    width: 100%;
+    height: calc(100% - 52px);
+    position: fixed;
+    left: 0;
+    top: 52px;
+    background: #ffffffd6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+  }
+  /* Membership */
+  .sn-membership{
+    margin: 2em 1em 2.5em 1em;
+  }
+  /* End of Membership */
+}
+.sound{
+  display: none;
+}
+.hide{
+  display: none;
+}
+.from_user_chat_style, .from_user_time_style{
+  text-align: right;
+}
+.chat_history ul li{
+  padding: 3px;
+}
+#uploadFile{
+  display: none;
+}
+#uploadForm{
+  display: none;
+}
+.upload_image_logo{
+  width: 18px;
+}
+.chat_history img{
+  width: 11em;
+}
+.active_now{
+  width: 7;
+  width: 7px;
+  height: 7px;
+  background: green;
+  position: absolute;
+  border-radius: 30px;
+  top: 20px;
+  left: 14em;
+}
+
+/* for Loading icon */
+
+.triple-spinner {
+  display: inline-block;
+  position: absolute;
+  z-index: 9999;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 4px solid #00000026;
+  border-top: 4px solid #2ec5ff;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/* end of loading icon */
